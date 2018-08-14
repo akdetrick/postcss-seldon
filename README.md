@@ -34,14 +34,14 @@ foo: bar
 #### `result.doc`
 ```js
 [
-	{
-		meta: {
-			title: "any frontmatter",
-			foo: "bar"
-		},
-		markdown: "# This is markdown",
-		html: "<h1>This is markdown</h1>"
-	}
+  {
+    meta: {
+      title: "any frontmatter",
+      foo: "bar"
+    },
+    markdown: "# This is markdown",
+    html: "<h1>This is markdown</h1>"
+  }
 ]
 ```
 
