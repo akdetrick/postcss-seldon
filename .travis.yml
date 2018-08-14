@@ -5,5 +5,4 @@ node_js:
 install:
   - YARN_IGNORE_ENGINES=true yarn
 script:
-   - yarn lint
-   - yarn mocha
+   - yarn run test
