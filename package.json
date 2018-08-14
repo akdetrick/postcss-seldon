@@ -27,6 +27,6 @@
     "mocha": "^5.2.0"
   },
   "scripts": {
-    "test": "yarn lint && mocha"
+    "test": "mocha"
   }
 }
