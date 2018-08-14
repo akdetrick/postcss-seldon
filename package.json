@@ -1,0 +1,42 @@
+{
+  "name": "postcss-seldon",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to collect documentation from structured comments in CSS.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "documentation",
+    "markdown",
+    "hologram",
+    "cssdoc"
+  ],
+  "author": "Adam Detrick <adetrick@cbinsights.com>",
+  "license": "MIT",
+  "repository": "akdetrick/postcss-seldon",
+  "bugs": {
+    "url": "https://github.com/akdetrick/postcss-seldon/issues"
+  },
+  "homepage": "https://github.com/akdetrick/postcss-seldon",
+  "dependencies": {
+    "postcss": "^6.0.16",
+    "remark": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^22.4.2"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
