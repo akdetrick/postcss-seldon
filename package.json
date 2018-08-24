@@ -19,8 +19,9 @@
   },
   "homepage": "https://github.com/akdetrick/postcss-seldon",
   "dependencies": {
-    "postcss": "^6.0.16",
-    "remark": "^9.0.0"
+    "gray-matter": "^4.0.1",
+    "marked": "^0.5.0",
+    "postcss": "^6.0.16"
   },
   "devDependencies": {
     "chai": "^4.1.2",

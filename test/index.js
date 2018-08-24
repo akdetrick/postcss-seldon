@@ -46,7 +46,17 @@ const assert = (message, fixtureName, opts) => {
 describe('postcss-seldon', () => {
 
     assert(
+        'Should not parse invalid doc comments',
+        'no-doc-comments'
+    );
+
+/*     assert(
         'Should correctly parse doc comments without frontmatter',
         'no-frontmatter'
     );
+
+    assert(
+        'Should parse doc comments frontmatter and add object to `meta`',
+        'frontmatter'
+    ); */
 });

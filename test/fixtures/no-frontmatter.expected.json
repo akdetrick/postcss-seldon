@@ -1,6 +1,7 @@
 [
 	{
 		"meta": null,
-		"content": "Just some good old markdown here"
+    "markdown": "Just some good old markdown here",
+    "html": "<p>Just some good old markdown here</p>\n"
 	}
 ]
