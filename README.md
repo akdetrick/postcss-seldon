@@ -5,7 +5,7 @@
 [PostCSS] plugin to collect documentation from structured comments in CSS.
 `postcss-seldon` attaches an object, `docs`, to the `postcss` result. Nothing more, nothing less.
 
-**`postcss-seldon` + your favorite templating language = automated CSS documentation**
+Use this plugin with your favorite templating language to generate CSS documentation.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/akdetrick/postcss-seldon.svg
@@ -16,11 +16,19 @@
 Add structured documentation comments and `postcss-seldon` will provide an object representing all
 comments found in your CSS.
 
+Documentation comments begin with `/**doc` and a newline, followed by yaml frontmatter. There are no
+required yaml properties; use whatever will work best for your documentation use case. Following the
+frontmatter, you can use github-flavored markdown.
+
 ```css
-/*doc
+/**doc
 ---
-title: any frontmatter
+title: My Cool Class
 foo: bar
+keywords:
+  - valid
+  - yaml
+  - here
 ---
 
 # This is markdown
@@ -36,8 +44,9 @@ foo: bar
 [
   {
     meta: {
-      title: "any frontmatter",
-      foo: "bar"
+      title: 'My Cool Class',
+      foo: 'bar',
+      keywords: ['valid', 'yaml', 'here']
     },
     markdown: "# This is markdown",
     html: "<h1>This is markdown</h1>"
