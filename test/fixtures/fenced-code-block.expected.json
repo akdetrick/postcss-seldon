@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "name": "FCB test"
+  },
+  "markdown": "\n```js\nconst lol = 3;\n```",
+  "html": "<pre><code class=\"language-js\">const lol = 3;</code></pre>\n"
+}

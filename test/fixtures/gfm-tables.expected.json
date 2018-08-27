@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "name": "Test GFM Tables"
+  },
+  "markdown": "\nCol1       | Col2\n---------- | -----------\nrow1 col1  | row1 col2",
+  "html": "<table>\n<thead>\n<tr>\n<th>Col1</th>\n<th>Col2</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>row1 col1</td>\n<td>row1 col2</td>\n</tr>\n</tbody></table>\n"
+}
