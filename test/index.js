@@ -1,8 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const chai = require('chai');
-const postcss = require('postcss');
-const plugin = require('../');
+const { parseComment } = require('../helpers');
 
 const expect = chai.expect;
 
