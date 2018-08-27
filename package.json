@@ -1,6 +1,6 @@
 {
   "name": "postcss-seldon",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PostCSS plugin to collect documentation from structured comments in CSS.",
   "keywords": [
     "postcss",
