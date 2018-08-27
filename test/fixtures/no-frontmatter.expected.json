@@ -1,7 +1,5 @@
-[
-	{
-		"meta": null,
-    "markdown": "Just some good old markdown here",
-    "html": "<p>Just some good old markdown here</p>\n"
-	}
-]
+{
+  "meta": null,
+  "markdown": "Just some good old markdown here",
+  "html": "<p>Just some good old markdown here</p>\n"
+}

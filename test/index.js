@@ -9,13 +9,15 @@ const expect = chai.expect;
 const DOC_KEY = 'doc';
 const fixtureBasePath = './test/fixtures/';
 
+// kind of a hack; mimic AST text for comment
+// elimiate comment delimiters
+const cleanCommentForTest = (comment) => `${comment}`
+  .replace(/\/\*\*doc/, '')
+  .replace(/\*\//, '')
+  .trim();
+
 /**
  * Runs assertion using provided fixture by name.
- *
- * This plugin adds a key to the postcss `result` object that
- * contains data about documentation comments. In our assertions,
- * we use JSON stringify to deep compare the generated data structure
- * to an expected result.
  *
  * @param {String} message test message
  * @param {String} fixtureName name of fixture (match to file name)
@@ -30,26 +32,16 @@ const assert = (message, fixtureName, opts) => {
             path.join(fixtureBasePath, `${fixtureName}.expected.json`)
         ).toString()
     ));
+    const actual = JSON.stringify(
+      parseComment(cleanCommentForTest(input))
+    );
 
-    it(message, () => {
-        return postcss([plugin(opts)])
-            .process(input)
-            .then(result => {
-                const actual = JSON.stringify(result[DOC_KEY]);
-                expect(result.warnings().length).to.equal(0);
-                expect(actual).to.equal(expected);
-            });
-    });
+    it(message, () => { expect(actual).to.equal(expected) });
 };
 
 describe('postcss-seldon', () => {
 
     assert(
-        'Should not parse invalid doc comments',
-        'no-doc-comments'
-    );
-
-/*     assert(
         'Should correctly parse doc comments without frontmatter',
         'no-frontmatter'
     );
@@ -57,5 +49,5 @@ describe('postcss-seldon', () => {
     assert(
         'Should parse doc comments frontmatter and add object to `meta`',
         'frontmatter'
-    ); */
+    );
 });
