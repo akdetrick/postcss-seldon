@@ -58,6 +58,9 @@ keywords:
 
 ```js
 postcss([ require('postcss-seldon') ])
+  .then(result => {
+    // `result.doc` contains documentation extracted from CSS
+  })
 ```
 
 See [PostCSS] docs for examples for your environment.
